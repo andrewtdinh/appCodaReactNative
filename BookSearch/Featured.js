@@ -12,7 +12,7 @@ var {
 var styles = StyleSheet.create({
   description: {
     fontSize: 20,
-    backgroundColor: 'white'
+    backgroundColor: 'red'
   },
   container: {
     flex: 1,
