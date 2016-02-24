@@ -11,29 +11,29 @@ var {
 } = React;
 
 var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-        padding: 10
-    },
-    thumbnail: {
-        width: 53,
-        height: 81,
-        marginRight: 10
-    },
-    rightContainer: {
-        flex: 1
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 8
-    },
-    author: {
-        color: '#656565'
-    }
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    padding: 10
+  },
+  thumbnail: {
+    width: 53,
+    height: 81,
+    marginRight: 10
+  },
+  rightContainer: {
+    flex: 1
+  },
+  title: {
+    fontSize: 20,
+    marginBottom: 8
+  },
+  author: {
+    color: '#656565'
+  }
 });
 
 var FAKE_BOOK_DATA = [
