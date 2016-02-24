@@ -3,9 +3,11 @@
 var React = require('react-native');
 
 var {
+  Image,
   StyleSheet,
+  Text,
   View,
-  Component
+  Component,
 } = React;
 
 var styles = StyleSheet.create({
