@@ -35,6 +35,10 @@ var styles = StyleSheet.create({
   },
   author: {
     color: '#656565'
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#dddddd'
   }
 });
 
