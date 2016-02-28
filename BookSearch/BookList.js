@@ -62,16 +62,12 @@ class BookList extends Component {
     });
   }
   render() {
-    var book = FAKE_BOOK_DATA[0];
     return (
-      <View style={styles.container}>
-        <Image source={{uri: book.volumeInfo.imageLinks.thumbnail}}
-          style={styles.thumbnail} />
-        <View style={styles.rightContainer}>
-          <Text style={styles.title}>{book.volumeInfo.title}</Text>
-          <Text style={styles.author}>{book.volumeInfo.authors}</Text>
-        </View>
-      </View>
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderBook.bind(this)}
+        style={styles.listView}
+        />
     );
   }
 }
