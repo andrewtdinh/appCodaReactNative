@@ -55,6 +55,12 @@ class BookList extends Component {
       })
     };
   }
+  componentDidMount() {
+    var books = FAKE_BOOK_DATA;
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(books)
+    });
+  }
   render() {
     var book = FAKE_BOOK_DATA[0];
     return (
