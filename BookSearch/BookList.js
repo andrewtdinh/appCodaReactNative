@@ -47,6 +47,14 @@ var FAKE_BOOK_DATA = [
 ];
 
 class BookList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2
+      })
+    };
+  }
   render() {
     var book = FAKE_BOOK_DATA[0];
     return (
