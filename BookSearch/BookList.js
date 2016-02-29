@@ -61,6 +61,24 @@ class BookList extends Component {
       dataSource: this.state.dataSource.cloneWithRows(books)
     });
   }
+  renderBook(book) {
+    return (
+      <TouchableHighlight>
+        <View>
+          <View style={styles.container}>
+            <Image
+            source={{uri: book.volumeInfo.imageLinks.thumbnail}}
+            style={styles.thumbnail} />
+          <View style={styles.rightContainer}>
+            <Text style={styles.title}>{book.volumeInfo.title}</Text>
+            <Text style={styles.author}>{book.volumeInfo.authors}</Text>
+          </View>
+        </View>
+        <View style={styles.separator} />
+      </View>
+    </TouchableHighlight>
+    );
+  }
   render() {
     return (
       <ListView
