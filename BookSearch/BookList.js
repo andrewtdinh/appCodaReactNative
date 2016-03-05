@@ -42,9 +42,7 @@ var styles = StyleSheet.create({
   }
 });
 
-var FAKE_BOOK_DATA = [
-  {volumeInfo: {title: 'The Catcher in the Rye', authors: "J. D. Salinger", imageLinks: {thumbnail: 'http://books.google.com/books/content?id=PCDengEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api'}}}
-];
+var REQUEST_URL = 'https://www.googleapis.com/books/v1/volumes?q=subject:fiction';
 
 class BookList extends Component {
   constructor(props) {
