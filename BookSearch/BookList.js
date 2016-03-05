@@ -9,7 +9,8 @@ var {
   View,
   Component,
   ListView,
-  TouchableHighlight
+  TouchableHighlight,
+  ActivityIndicatorIOS
 } = React;
 
 var styles = StyleSheet.create({
