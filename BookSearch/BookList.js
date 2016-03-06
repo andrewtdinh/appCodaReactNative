@@ -57,6 +57,7 @@ class BookList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2
       })
