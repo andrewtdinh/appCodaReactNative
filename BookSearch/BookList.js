@@ -64,10 +64,19 @@ class BookList extends Component {
     };
   }
   componentDidMount() {
-    var books = FAKE_BOOK_DATA;
-    this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(books)
-    });
+    this.fetchData();
+  }
+
+  fetchData() {
+    fetch(REQUEST_URL)
+    .then((response) => response.json())
+    .then((responseData) => {
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(responseData.items),
+        isLoading: false
+      });
+    })
+    .done();
   }
   renderBook(book) {
     return (
