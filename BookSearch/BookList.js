@@ -96,6 +96,17 @@ class BookList extends Component {
     </TouchableHighlight>
     );
   }
+  renderLoadingView() {
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicatorIOS
+          size='large'/>
+        <Text>
+          Loading books...
+        </Text>
+      </View>
+    );
+  }
   render() {
     if (this.state.isLoading) {
       return this.renderLoadingView();
