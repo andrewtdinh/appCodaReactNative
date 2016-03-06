@@ -97,6 +97,10 @@ class BookList extends Component {
     );
   }
   render() {
+    if (this.state.isLoading) {
+      return this.renderLoadingView();
+    }
+
     return (
       <ListView
         dataSource={this.state.dataSource}
