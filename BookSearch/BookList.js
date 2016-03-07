@@ -83,7 +83,7 @@ class BookList extends Component {
   }
   renderBook(book) {
     return (
-      <TouchableHighlight>
+      <TouchableHighlight onPress={() => this.showBookDetail(book)}  underlayColor='#dddddd'>
         <View>
           <View style={styles.container}>
             <Image
