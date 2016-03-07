@@ -16,7 +16,6 @@ var {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 75,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -43,7 +42,8 @@ var styles = StyleSheet.create({
     backgroundColor: '#dddddd'
   },
   listView: {
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#F5FCFF',
+    marginTop: 66
   },
   loading: {
     flex: 1,
