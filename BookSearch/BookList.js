@@ -16,6 +16,7 @@ var {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 75,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
