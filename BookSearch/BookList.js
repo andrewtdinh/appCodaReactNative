@@ -66,6 +66,7 @@ class BookList extends Component {
       })
     };
   }
+
   componentDidMount() {
     this.fetchData();
   }
@@ -81,6 +82,15 @@ class BookList extends Component {
     })
     .done();
   }
+
+  showBookDetail(book) {
+    this.props.navigator.push({
+      title: book.volumeInfo.title,
+      component: BookDetail,
+      passProps: {book}
+    });
+  }
+
   renderBook(book) {
     return (
       <TouchableHighlight onPress={() => this.showBookDetail(book)}  underlayColor='#dddddd'>
@@ -99,6 +109,7 @@ class BookList extends Component {
     </TouchableHighlight>
     );
   }
+
   renderLoadingView() {
     return (
       <View style={styles.loading}>
@@ -110,6 +121,7 @@ class BookList extends Component {
       </View>
     );
   }
+
   render() {
     if (this.state.isLoading) {
       return this.renderLoadingView();
