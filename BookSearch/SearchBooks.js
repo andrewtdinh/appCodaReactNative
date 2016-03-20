@@ -143,8 +143,8 @@ class SearchBooks extends Component {
         errorMessage: error
       }))
       .done();
-    }
-
   }
 
-  module.exports = SearchBooks;
+}
+
+module.exports = SearchBooks;
