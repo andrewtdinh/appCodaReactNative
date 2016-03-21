@@ -33,12 +33,12 @@ class BookDetail extends Component {
     var imageURI = (typeof book.volumeInfo.imageLinks !== 'undefined') ? book.volumeInfo.imageLinks.thumbnail : '';
     var description = (typeof book.volumeInfo.description !== 'undefined') ? book.volumeInfo.description : '';
     return (
-      <View style={styles.container}>
-        <Image style={styles.image} source={{uri: imageURI}} />
-        <Text style={styles.description}>{description}</Text>
-      </View>
+        <View style={styles.container}>
+            <Image style={styles.image} source={{uri: imageURI}} />
+            <Text style={styles.description}>{description}</Text>
+        </View>
     );
-  }
+}
 }
 
 module.exports = BookDetail;
